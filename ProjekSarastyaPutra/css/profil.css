@@ -1,0 +1,242 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(120deg, #0093E9, #80D0C7); /* Gradasi biru laut ke biru muda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    background-attachment: fixed; /* Tetapkan background tidak bergerak */
+}
+
+/* Efek Gelombang Air */
+@keyframes waterEffect {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+.company-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: fadeIn 2s ease-out;
+}
+.company-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: -9px -5px 12px rgba(0,0,0,1);
+    font-family: "Georgia", serif;
+    margin-left: 10px;
+}
+.logo {
+    width: 55px;
+    height: 50px;
+    background: url("../mentahan/logo.png") no-repeat center center;
+    background-size: contain;
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(0, 0, 0, 0.6); /* Menggunakan latar belakang lebih gelap dengan transparansi */
+    padding: 30px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-out, waterEffect 10s linear infinite;
+    position: relative;
+    background-image: url("../mentahan/water-wave.png");
+    background-size: 200% 200%; /* Ukuran gambar gelombang */
+    background-repeat: no-repeat;
+    background-position-x: 0;
+}
+
+/* Gelombang Efek */
+@keyframes waterEffect {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -100%;
+    }
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input Fields Styling */
+.login-container label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #d3d3d3;
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 0 12px;
+}
+.input-icon i {
+    margin-right: 12px;
+    color: #fff;
+    font-size: 16px;
+}
+.input-icon input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Submit Button */
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #4caf50, #388e3c);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 15px rgba(72, 187, 120, 0.5);
+    border-bottom: 4px solid #388e3c;
+}
+.login-container input[type="submit"]:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(90deg, #388e3c, #4caf50);
+    box-shadow: 0 8px 20px rgba(72, 187, 120, 0.7);
+}
+.login-container input[type="submit"]:active {
+    transform: translateY(2px);
+    background: #388e3c;
+    box-shadow: 0 4px 10px rgba(72, 187, 120, 0.3);
+}
+.login-container input[type="submit"]:focus {
+    outline: none;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    margin-top: 20px;
+    text-align: center;
+}
+.forgot-password a {
+    color: #d3d3d3;
+    text-decoration: none;
+    font-size: 13px;
+}
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Update Akun Container */
+.update-container {
+    background: rgba(0, 0, 0, 0.7); /* Menggunakan latar belakang lebih gelap dengan transparansi */
+    padding: 35px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1.8s ease-out, waterEffect 10s linear infinite;
+    position: relative;
+    background-image: url("../mentahan/water-wave.png");
+    background-size: 200% 200%; /* Ukuran gambar gelombang */
+    background-repeat: no-repeat;
+    background-position-x: 0;
+}
+
+.update-container h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.update-container label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 16px;
+    color: #d3d3d3;
+}
+
+.update-container .input-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 0 15px;
+}
+.update-container .input-icon i {
+    margin-right: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+.update-container .input-icon input {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Update Button */
+.update-container input[type="submit"] {
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    border-radius: 35px;
+    background: linear-gradient(45deg, #ff5722, #f44336);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(255, 87, 34, 0.7);
+    border-bottom: 5px solid #f44336;
+}
+.update-container input[type="submit"]:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(45deg, #f44336, #ff5722);
+    box-shadow: 0 10px 25px rgba(255, 87, 34, 0.8);
+}
+.update-container input[type="submit"]:active {
+    transform: translateY(3px);
+    background: #f44336;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+.update-container input[type="submit"]:focus {
+    outline: none;
+}
